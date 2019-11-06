@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 $font-family: "Roboto", sans-serif;
+$p-size: 13px;
+$h4-size: 15px;
+$h3-size: 18px;
+$p-height: 1;
 
 * {
   padding: 0;
@@ -22,35 +26,35 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: $font-family;
+  font-weight: blod;
   h1 {
     font-size: 30px;
-    font-weight: 900;
   }
   #form_title {
     width: 350px;
     height: 150px;
     display: flex;
     align-items: center;
-    padding-left: 40px;
+    padding-left: 60px;
     margin-top: 40px;
   }
   #form_content {
     width: 250px;
     height: 280px;
+    line-height: 1.5;
     background-color: white;
     border: solid 1px black;
     margin-right: 55px;
     padding: 35px;
     h4 {
-      font-size: 15px;
-      font-weight: bold;
+      font-size: $h4-size;
+      font-weight: 900 !important;
       text-align: center;
       margin-bottom: 8px;
     }
 
     p {
-      font-size: 13px;
+      font-size: $p-size;
       text-align: center;
       margin: 5px;
     }
@@ -64,5 +68,44 @@ form {
     border: none;
     color: rgb(187, 180, 180);
     border-bottom: 1px solid rgb(187, 180, 180);
+  }
+  button {
+    width: 140px;
+    color: #fff;
+    font-size: 13px;
+    text-decoration: none;
+    background: #ee4907;
+    padding: 10px;
+    border-radius: 1px;
+    border: none;
+    margin: 15px 65px;
+  }
+}
+.section2 {
+  padding: 30px 300px;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  h3 {
+    font-size: $h3-size;
+    color: rgb(108, 183, 249);
+    margin-bottom: 10px;
+    p {
+      line-height: $p-height;
+      font-size: $p-size;
+    }
+  }
+  p {
+    line-height: $p-height;
+    font-size: $p-size;
+  }
+  hr {
+    width: 50px;
+    margin-bottom: 10px;
+    border-top: 1px solid rgba(228, 228, 228, 0.892);
   }
 }
