@@ -38,13 +38,12 @@ header img {
 
 .section1 h1 {
   font-size: 30px;
-  font-weight: 1000;
+  font-weight: 900;
 }
 
 .section1 #form_title {
   width: 350px;
   height: 150px;
-  font-weight: bold;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -77,13 +76,17 @@ header img {
   margin: 5px;
 }
 
-.section1 form {
+form {
   padding-top: 20px;
 }
 
-.section1 form label {
+form input {
+  font-size: 5px;
+  width: 250px;
+  padding: 5px;
+  border: none;
   font-size: 13px;
-  margin: 5px;
   color: #bbb4b4;
+  border-bottom: 1px solid #bbb4b4;
 }
 /*# sourceMappingURL=style.css.map */

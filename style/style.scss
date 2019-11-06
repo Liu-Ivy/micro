@@ -55,12 +55,14 @@ header {
       margin: 5px;
     }
   }
-  form {
-    padding-top: 20px;
-    label {
-      font-size: 13px;
-      margin: 5px;
-      color: rgb(187, 180, 180);
-    }
+}
+form {
+  padding-top: 20px;
+  input {
+    width: 250px;
+    padding: 8px;
+    border: none;
+    color: rgb(187, 180, 180);
+    border-bottom: 1px solid rgb(187, 180, 180);
   }
 }
