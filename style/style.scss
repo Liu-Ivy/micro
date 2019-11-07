@@ -38,14 +38,21 @@ header {
   }
 }
 .section1 {
-  height: 500px;
+  height: 450px;
   background-color: rgb(195, 191, 191);
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-weight: blod;
   @media only screen and (max-width: 1240px) {
+    height: 550px;
     flex-direction: column;
+  }
+  @media only screen and (max-width: 970px) {
+    height: 550px;
+  }
+  @media only screen and (max-width: 510px) {
+    height: 550px;
   }
   h1 {
     font-size: 30px;
@@ -186,22 +193,12 @@ form {
       height: 30px;
     }
   }
-}
-@media only screen and (max-width: 700px) {
-  .goal {
+
+  @media only screen and (max-width: 700px) {
+    display: inline;
+    padding: 0 80px;
     span {
-      width: 100px;
-      height: 80px;
-    }
-    p {
-      margin: 0;
-      font-weight: normal;
-      line-height: 0.6;
-      font-size: 1px;
-    }
-    img {
-      width: 20px;
-      height: 20px;
+      margin: auto;
     }
   }
 }
@@ -237,6 +234,16 @@ form {
   @media only screen and (max-width: 700px) {
     padding-left: 450px;
     padding-top: 50px;
+  }
+  @media only screen and (max-width: 500px) {
+    padding-left: 40px;
+    padding-top: 40px;
+    h4,
+    h2,
+    h5,
+    p {
+      color: white;
+    }
   }
   h4 {
     margin: 3px;

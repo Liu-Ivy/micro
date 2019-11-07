@@ -47,7 +47,7 @@ header img {
 }
 
 .section1 {
-  height: 500px;
+  height: 450px;
   background-color: #c3bfbf;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -63,10 +63,23 @@ header img {
 
 @media only screen and (max-width: 1240px) {
   .section1 {
+    height: 550px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 970px) {
+  .section1 {
+    height: 550px;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  .section1 {
+    height: 550px;
   }
 }
 
@@ -279,19 +292,12 @@ form button {
 }
 
 @media only screen and (max-width: 700px) {
+  .goal {
+    display: inline;
+    padding: 0 80px;
+  }
   .goal span {
-    width: 100px;
-    height: 80px;
-  }
-  .goal p {
-    margin: 0;
-    font-weight: normal;
-    line-height: 0.6;
-    font-size: 1px;
-  }
-  .goal img {
-    width: 20px;
-    height: 20px;
+    margin: auto;
   }
 }
 
@@ -345,6 +351,19 @@ form button {
   .time {
     padding-left: 450px;
     padding-top: 50px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .time {
+    padding-left: 40px;
+    padding-top: 40px;
+  }
+  .time h4,
+  .time h2,
+  .time h5,
+  .time p {
+    color: white;
   }
 }
 
