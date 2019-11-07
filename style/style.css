@@ -1,7 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
-* {
-  padding: 0;
-  margin: 0;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  overflow-x: hidden;
 }
 
 header {
@@ -11,14 +15,35 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-item-align: center;
-      align-self: center;
+  padding: 0 300px;
 }
 
 header img {
   width: 120px;
   height: 20px;
-  padding: 15px 90px;
+  padding: 15px 0;
+}
+
+@media only screen and (max-width: 1240px) {
+  header {
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 936px) {
+  header {
+    padding: 0 100px;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  header {
+    padding: 0 50px;
+  }
+  header img {
+    width: 90px;
+    height: 20px;
+  }
 }
 
 .section1 {
@@ -36,8 +61,24 @@ header img {
   font-weight: blod;
 }
 
+@media only screen and (max-width: 1240px) {
+  .section1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .section1 h1 {
   font-size: 30px;
+}
+
+@media only screen and (max-width: 510px) {
+  .section1 h1 {
+    font-size: 15px;
+    text-align: center;
+  }
 }
 
 .section1 #form_title {
@@ -49,8 +90,14 @@ header img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 60px;
-  margin-top: 40px;
+  padding-left: 320px;
+  margin-top: 30px;
+}
+
+@media only screen and (max-width: 1240px) {
+  .section1 #form_title {
+    padding: 0;
+  }
 }
 
 .section1 #form_content {
@@ -59,8 +106,22 @@ header img {
   line-height: 1.5;
   background-color: white;
   border: solid 1px black;
-  margin-right: 55px;
+  margin-right: 320px;
   padding: 35px;
+}
+
+@media only screen and (max-width: 1240px) {
+  .section1 #form_content {
+    margin: 10px;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  .section1 #form_content {
+    width: 200px;
+    height: 280px;
+    padding: 20px;
+  }
 }
 
 .section1 #form_content h4 {
@@ -88,6 +149,12 @@ form input {
   border-bottom: 1px solid #bbb4b4;
 }
 
+@media only screen and (max-width: 510px) {
+  form input {
+    width: 200px;
+  }
+}
+
 form button {
   width: 140px;
   color: #fff;
@@ -98,6 +165,13 @@ form button {
   border-radius: 1px;
   border: none;
   margin: 15px 65px;
+}
+
+@media only screen and (max-width: 510px) {
+  form button {
+    width: 100px;
+    margin: 5px 0 0 55px;
+  }
 }
 
 .section2 {
@@ -120,6 +194,24 @@ form button {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+}
+
+@media only screen and (max-width: 936px) {
+  .info {
+    padding: 0 200px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .info {
+    padding: 0 100px;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  .info {
+    padding: 0 20px;
+  }
 }
 
 .info h3 {
@@ -186,18 +278,74 @@ form button {
   height: 30px;
 }
 
+@media only screen and (max-width: 700px) {
+  .goal span {
+    width: 100px;
+    height: 80px;
+  }
+  .goal p {
+    margin: 0;
+    font-weight: normal;
+    line-height: 0.6;
+    font-size: 1px;
+  }
+  .goal img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 .section3 {
-  height: 400px;
+  height: 500px;
   background: url("/images/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+@media only screen and (max-width: 1135px) {
+  .section3 {
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 936px) {
+  .section3 {
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .section3 {
+    height: 250px;
+  }
+}
+
 .time {
   width: 300px;
   height: 300px;
-  padding-left: 550px;
-  padding-top: 80px;
+  padding-left: 900px;
+  padding-top: 90px;
+}
+
+@media only screen and (max-width: 1135px) {
+  .time {
+    padding-left: 700px;
+    padding-top: 80px;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  .time {
+    padding-left: 550px;
+    padding-top: 70px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .time {
+    padding-left: 450px;
+    padding-top: 50px;
+  }
 }
 
 .time h4 {
@@ -210,18 +358,22 @@ form button {
 
 .time hr {
   width: 20px;
-  margin-bottom: 15px;
+  margin: 0px;
+  text-align: left;
   border-top: 2px solid white;
 }
 
 .time h5 {
+  margin: 0;
+  padding-top: 5px;
   font-size: 13.5px;
   font-weight: bold;
 }
 
 .time p {
   line-height: 1.2;
-  font-size: 12px;
+  font-size: 10px;
+  margin: 5px 0;
 }
 
 .time-card {
@@ -244,7 +396,7 @@ form button {
   width: 40px;
   height: 40px;
   border-radius: 1px;
-  margin-top: 30px;
+  margin-top: 10px;
   margin-right: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -259,14 +411,20 @@ form button {
   text-align: center;
 }
 
+.time-card span h3 {
+  margin: 0;
+  padding-top: 10px;
+}
+
 .time-card span p {
   font-weight: bold;
   line-height: 1.2;
-  padding-top: 4px;
+  margin: 5px 0;
   font-size: 6px;
 }
 
 .section4 {
+  width: 100%;
   background-color: #3c3939;
   text-align: center;
   padding: 30px 0;
@@ -288,10 +446,40 @@ form button {
   font-weight: normal;
 }
 
-.button {
+.bottom {
   margin-top: 20px;
   color: white;
   font-weight: normal;
-  line-height: 1.2;
+}
+
+.bottom a {
+  color: #f7881f;
+}
+
+.bottom img {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  color: white;
+}
+
+footer {
+  background-color: #f4efe7;
+  padding: 30px;
+  text-align: center;
+}
+
+footer img {
+  width: 15px;
+  height: 15px;
+}
+
+footer a {
+  color: #bbb4b4;
+}
+
+footer p {
+  color: #bbb4b4;
+  line-height: 1.5;
 }
 /*# sourceMappingURL=style.css.map */

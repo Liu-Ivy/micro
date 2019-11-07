@@ -5,20 +5,36 @@ $h4-size: 15px;
 $h3-size: 18px;
 $p-height: 1.2;
 
-* {
-  padding: 0;
-  margin: 0;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  overflow-x: hidden;
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  align-self: center;
-  // align-content: center;
+  padding: 0 300px;
   img {
     width: 120px;
     height: 20px;
-    padding: 15px 90px;
+    padding: 15px 0;
+  }
+  @media only screen and (max-width: 1240px) {
+    margin: auto;
+  }
+  @media only screen and (max-width: 936px) {
+    padding: 0 100px;
+  }
+  @media only screen and (max-width: 510px) {
+    padding: 0 50px;
+    img {
+      width: 90px;
+      height: 20px;
+    }
   }
 }
 .section1 {
@@ -28,16 +44,26 @@ header {
   justify-content: space-between;
   align-items: center;
   font-weight: blod;
+  @media only screen and (max-width: 1240px) {
+    flex-direction: column;
+  }
   h1 {
     font-size: 30px;
+    @media only screen and (max-width: 510px) {
+      font-size: 15px;
+      text-align: center;
+    }
   }
   #form_title {
     width: 350px;
     height: 150px;
     display: flex;
     align-items: center;
-    padding-left: 60px;
-    margin-top: 40px;
+    padding-left: 320px;
+    margin-top: 30px;
+    @media only screen and (max-width: 1240px) {
+      padding: 0;
+    }
   }
   #form_content {
     width: 250px;
@@ -45,8 +71,16 @@ header {
     line-height: 1.5;
     background-color: white;
     border: solid 1px black;
-    margin-right: 55px;
+    margin-right: 320px;
     padding: 35px;
+    @media only screen and (max-width: 1240px) {
+      margin: 10px;
+    }
+    @media only screen and (max-width: 510px) {
+      width: 200px;
+      height: 280px;
+      padding: 20px;
+    }
     h4 {
       font-size: $h4-size;
       font-weight: 900 !important;
@@ -69,7 +103,11 @@ form {
     border: none;
     color: rgb(187, 180, 180);
     border-bottom: 1px solid rgb(187, 180, 180);
+    @media only screen and (max-width: 510px) {
+      width: 200px;
+    }
   }
+
   button {
     width: 140px;
     color: #fff;
@@ -80,6 +118,10 @@ form {
     border-radius: 1px;
     border: none;
     margin: 15px 65px;
+    @media only screen and (max-width: 510px) {
+      width: 100px;
+      margin: 5px 0 0 55px;
+    }
   }
 }
 .section2 {
@@ -92,6 +134,15 @@ form {
   justify-content: center;
   align-items: center;
   text-align: center;
+  @media only screen and (max-width: 936px) {
+    padding: 0 200px;
+  }
+  @media only screen and (max-width: 650px) {
+    padding: 0 100px;
+  }
+  @media only screen and (max-width: 510px) {
+    padding: 0 20px;
+  }
   h3 {
     font-size: $h3-size;
     color: rgb(108, 183, 249);
@@ -136,17 +187,57 @@ form {
     }
   }
 }
+@media only screen and (max-width: 700px) {
+  .goal {
+    span {
+      width: 100px;
+      height: 80px;
+    }
+    p {
+      margin: 0;
+      font-weight: normal;
+      line-height: 0.6;
+      font-size: 1px;
+    }
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
 .section3 {
-  height: 400px;
+  height: 500px;
   background: url("/images/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  @media only screen and (max-width: 1135px) {
+    height: 400px;
+  }
+  @media only screen and (max-width: 936px) {
+    height: 300px;
+  }
+  @media only screen and (max-width: 700px) {
+    height: 250px;
+  }
 }
 .time {
   width: 300px;
   height: 300px;
-  padding-left: 550px;
-  padding-top: 80px;
+  padding-left: 900px;
+  padding-top: 90px;
+  @media only screen and (max-width: 1135px) {
+    padding-left: 700px;
+    padding-top: 80px;
+  }
+  @media only screen and (max-width: 940px) {
+    padding-left: 550px;
+    padding-top: 70px;
+  }
+  @media only screen and (max-width: 700px) {
+    padding-left: 450px;
+    padding-top: 50px;
+  }
   h4 {
     margin: 3px;
   }
@@ -155,16 +246,20 @@ form {
   }
   hr {
     width: 20px;
-    margin-bottom: 15px;
+    margin: 0px;
+    text-align: left;
     border-top: 2px solid white;
   }
   h5 {
+    margin: 0;
+    padding-top: 5px;
     font-size: 13.5px;
     font-weight: bold;
   }
   p {
     line-height: $p-height;
-    font-size: $p-size;
+    font-size: 10px;
+    margin: 5px 0;
   }
 }
 .time-card {
@@ -179,21 +274,26 @@ form {
     width: 40px;
     height: 40px;
     border-radius: 1px;
-    margin-top: 30px;
+    margin-top: 10px;
     margin-right: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    h3 {
+      margin: 0;
+      padding-top: 10px;
+    }
     p {
       font-weight: bold;
       line-height: $p-height;
-      padding-top: 4px;
+      margin: 5px 0;
       font-size: 6px;
     }
   }
 }
 .section4 {
+  width: 100%;
   background-color: rgb(60, 57, 57);
   text-align: center;
   padding: 30px 0;
@@ -214,9 +314,33 @@ form {
     font-weight: normal;
   }
 }
-.button {
+.bottom {
+  a {
+    color: rgb(247, 136, 31);
+  }
+  img {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    color: white;
+  }
   margin-top: 20px;
   color: white;
   font-weight: normal;
-  line-height: $p-height;
+}
+footer {
+  background-color: rgb(244, 239, 231);
+  padding: 30px;
+  text-align: center;
+  img {
+    width: 15px;
+    height: 15px;
+  }
+  a {
+    color: rgb(187, 180, 180);
+  }
+  p {
+    color: rgb(187, 180, 180);
+    line-height: 1.5;
+  }
 }
